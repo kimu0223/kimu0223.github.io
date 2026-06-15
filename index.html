@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>あしあと帖 — シューズと過ごした日々を、永遠に。</title>
+<meta name="description" content="あしあと帖（SOLED）は、スポーツシューズの思い出を残す感情アルバムアプリ。現役から引退まで、一足ごとの物語を記録します。">
+<meta name="theme-color" content="#C4A882">
+<meta property="og:title" content="あしあと帖 — シューズと過ごした日々を、永遠に。">
+<meta property="og:description" content="スポーツシューズの思い出を残す感情アルバムアプリ。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --amber:#C4A882; --amber-deep:#A8895E;
+    --ink:#3A332B; --muted:#6B6256; --faint:#9A9080;
+    --bg:#FBF8F3; --card:#FFFFFF; --line:#ECE4D8;
+    --serif:"Noto Serif JP",serif;
+    --sans:"Noto Sans JP",-apple-system,"Hiragino Sans",sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); line-height:1.8;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+  a{color:var(--amber-deep); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* ── Header ── */
+  header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(251,248,243,.82); backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:60px;}
+  .brand{font-family:var(--serif); font-weight:700; letter-spacing:.06em; font-size:1.15rem;}
+  .brand .soled{color:var(--amber-deep); font-size:.7rem; letter-spacing:.18em; margin-left:.4em; vertical-align:.15em;}
+  .nav nav a{margin-left:22px; color:var(--muted); font-size:.9rem;}
+
+  /* ── Hero ── */
+  .hero{text-align:center; padding:96px 0 72px;}
+  .glyph{
+    width:84px; height:84px; margin:0 auto 28px; border-radius:24px;
+    background:linear-gradient(150deg,#D9C29C,#C4A882 60%,#A8895E);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 30px rgba(168,137,94,.28);
+  }
+  .glyph svg{width:46px; height:46px; fill:#fff;}
+  .hero h1{
+    font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,5vw,3rem);
+    letter-spacing:.04em; margin:.2em 0 .35em; line-height:1.45;
+  }
+  .hero p.lead{font-size:clamp(1rem,2.4vw,1.18rem); color:var(--muted); margin:0 auto 36px; max-width:34em;}
+  .cta{
+    display:inline-flex; align-items:center; gap:.5em;
+    background:var(--ink); color:#fff; padding:14px 30px; border-radius:999px;
+    font-weight:700; font-size:.98rem; box-shadow:0 8px 22px rgba(58,51,43,.22);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(58,51,43,.3); text-decoration:none;}
+  .hero small{display:block; margin-top:16px; color:var(--faint); font-size:.82rem;}
+
+  /* ── Sections ── */
+  section{padding:64px 0;}
+  .section-title{font-family:var(--serif); font-weight:700; font-size:1.55rem; letter-spacing:.04em; text-align:center; margin:0 0 8px;}
+  .section-sub{text-align:center; color:var(--faint); font-size:.9rem; margin:0 0 44px;}
+
+  .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:18px; padding:30px 26px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:0 14px 34px rgba(168,137,94,.14);}
+  .card .ico{
+    width:48px; height:48px; border-radius:14px; background:rgba(196,168,130,.16);
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+  }
+  .card .ico svg{width:26px; height:26px; fill:var(--amber-deep);}
+  .card h3{font-family:var(--serif); font-weight:600; font-size:1.12rem; margin:0 0 8px;}
+  .card p{margin:0; color:var(--muted); font-size:.92rem;}
+
+  /* ── Concept band ── */
+  .band{background:linear-gradient(180deg,#F4ECDF,#FBF8F3); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .band .wrap{text-align:center; max-width:42em;}
+  .band blockquote{font-family:var(--serif); font-size:clamp(1.15rem,3vw,1.5rem); line-height:2; margin:0; color:var(--ink);}
+  .band cite{display:block; margin-top:18px; color:var(--amber-deep); font-style:normal; font-size:.9rem; letter-spacing:.1em;}
+
+  /* ── Premium ── */
+  .plan{
+    max-width:460px; margin:0 auto; background:var(--card); border:1px solid var(--line);
+    border-radius:22px; padding:38px 32px; text-align:center; box-shadow:0 14px 40px rgba(168,137,94,.12);
+  }
+  .plan .price{font-family:var(--serif); font-size:2.2rem; font-weight:700; color:var(--ink);}
+  .plan .price small{font-size:.9rem; color:var(--faint); font-weight:400;}
+  .plan ul{list-style:none; padding:0; margin:22px 0 0; text-align:left;}
+  .plan li{padding:9px 0 9px 30px; position:relative; color:var(--muted); border-top:1px dashed var(--line);}
+  .plan li:first-child{border-top:none;}
+  .plan li::before{content:""; position:absolute; left:2px; top:14px; width:16px; height:9px; border-left:2.5px solid var(--amber-deep); border-bottom:2.5px solid var(--amber-deep); transform:rotate(-45deg);}
+
+  /* ── Contact / Footer ── */
+  .contact{text-align:center;}
+  .contact p{color:var(--muted); max-width:34em; margin:0 auto 20px;}
+  footer{border-top:1px solid var(--line); padding:36px 0; text-align:center; color:var(--faint); font-size:.82rem;}
+  footer .brand{font-size:1rem; color:var(--ink); display:inline-block; margin-bottom:8px;}
+  footer nav a{margin:0 10px; color:var(--faint);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <span class="brand">あしあと帖<span class="soled">SOLED</span></span>
+    <nav>
+      <a href="#features">特長</a>
+      <a href="#premium">プレミアム</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M13.5 2c-.7 0-1.3.5-1.5 1.2-.4 1.4-.3 2.6.1 3.8.3.9.7 1.7.7 2.6 0 .8-.3 1.4-.3 2.1 0 1 .6 1.6 1.6 1.6 1.3 0 2.4-1.1 2.6-2.6.3-1.9-.1-3.9-.8-5.7C15.7 3.3 14.8 2 13.5 2zM7 9.5c-.6 0-1.1.4-1.3 1-.3 1-.2 1.9.1 2.7.2.6.5 1.2.5 1.8 0 .6-.2 1-.2 1.5 0 .8.5 1.3 1.3 1.3 1 0 1.9-.8 2.1-2 .2-1.4-.1-2.8-.7-4C8.4 10.4 7.8 9.5 7 9.5z"/></svg>
+      </div>
+      <h1>シューズと過ごした日々を、永遠に。</h1>
+      <p class="lead">あしあと帖は、スポーツシューズの思い出を残す感情アルバム。最初の一歩から引退の日まで、一足ごとの物語をやさしく綴ります。</p>
+      <a class="cta" href="#contact">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4l1.7 4.9H19l-4.2 3 1.6 5L12 16.8 7.6 18.9l1.6-5L5 10.9h5.3L12 6z"/></svg>
+        App Store で見る（準備中）
+      </a>
+      <small>iOS 17.0 以降 / 無料（App内課金あり）</small>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2 class="section-title">一足の物語を、まるごと残す</h2>
+      <p class="section-sub">記録するだけでなく、振り返るたびに気持ちが動くアプリ。</p>
+      <div class="features">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm2 3v8l5-4-5-4zm9 0v8h2V8h-2z"/></svg></div>
+          <h3>思い出を綴る</h3>
+          <p>写真とコメントで、試合や練習の一場面を一足ごとに記録。日付とタグで後から振り返れます。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg></div>
+          <h3>引退式で送り出す</h3>
+          <p>役目を終えた一足には、特別な「引退式」を。ともに歩んだ日数を噛みしめ、静かに歴代へと迎えます。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 3h14a1 1 0 011 1v16l-8-3.6L4 20V4a1 1 0 011-1z"/></svg></div>
+          <h3>歴代コレクション</h3>
+          <p>履いてきた一足一足が棚に並ぶ。あなたのスポーツ人生そのものが、コレクションになります。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 7 4-14 3 7h4" fill="none" stroke="#A8895E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>年表で振り返る</h3>
+          <p>登録した一足を時系列で一望。いつ、どのシューズと走っていたか——人生の軌跡が見えてきます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <blockquote>「このスパイク履いてた頃、<br>めっちゃ走ってたな。」<br>——そんな一言が、ずっと残る場所を。</blockquote>
+      <cite>あしあと帖 / SOLED</cite>
+    </div>
+  </section>
+
+  <section id="premium">
+    <div class="wrap">
+      <h2 class="section-title">プレミアム</h2>
+      <p class="section-sub">買い切りで、すべての機能を解放。</p>
+      <div class="plan">
+        <div class="price">¥980 <small>/ 買い切り</small></div>
+        <ul>
+          <li>シューズの登録数 無制限</li>
+          <li>写真の枚数 無制限</li>
+          <li>カテゴリフィルターで絞り込み</li>
+          <li>広告の非表示</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2 class="section-title">お問い合わせ</h2>
+      <p>ご意見・ご要望・不具合のご報告は、下記までお気軽にどうぞ。いただいた声は今後のアップデートの参考にさせていただきます。</p>
+      <a class="cta" href="mailto:kimura0223sota@gmail.com">メールで問い合わせる</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">あしあと帖<span class="soled" style="color:var(--amber-deep)">SOLED</span></div>
+    <nav>
+      <a href="#features">特長</a>
+      <a href="#premium">プレミアム</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <p>© 2026 SOLED / あしあと帖</p>
+  </div>
+</footer>
+
+</body>
+</html>
