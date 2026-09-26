@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー — あしあと帖</title>
+<meta name="description" content="あしあと帖のプライバシーポリシー。端末の中だけに保存される情報と、広告（Google AdMob）・利用状況の分析（PostHog）・課金（Apple）のために外部へ送られる情報、利用目的と法的根拠、保存期間、お客様の権利。">
+<meta name="theme-color" content="#C4A882">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://kimu0223.github.io/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://kimu0223.github.io/privacy.html">
+<link rel="alternate" hreflang="en" href="https://kimu0223.github.io/privacy-en.html">
+<link rel="alternate" hreflang="x-default" href="https://kimu0223.github.io/privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --amber:#C4A882; --amber-deep:#A8895E;
+    --ink:#3A332B; --muted:#6B6256; --faint:#9A9080;
+    --bg:#FBF8F3; --card:#FFFFFF; --line:#ECE4D8;
+    --serif:"Noto Serif JP",serif;
+    --sans:"Noto Sans JP",-apple-system,"Hiragino Sans",sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); line-height:1.9;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
+  /* 本文中の URL はそのまま表示しているので、狭い画面で折り返せないと横スクロールが出る。
+     https://policies.google.com/technologies/partner-sites が 375px 幅で枠外へ出ていた。 */
+  a{color:var(--amber-deep); text-decoration:none; overflow-wrap:anywhere;}
+  a:hover{text-decoration:underline;}
+  header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(251,248,243,.82); backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:60px;}
+  .brand{font-family:var(--serif); font-weight:700; letter-spacing:.06em; font-size:1.15rem;}
+  .brand .soled{color:var(--amber-deep); font-size:.7rem; letter-spacing:.18em; margin-left:.4em; vertical-align:.15em;}
+  .nav nav a{margin-left:22px; color:var(--muted); font-size:.9rem;}
+  main{padding:56px 0 80px;}
+  h1{font-family:var(--serif); font-size:1.9rem; letter-spacing:.02em; margin:0 0 .4em;}
+  .updated{color:var(--faint); font-size:.85rem; margin:0 0 2.4em;}
+  h2{
+    font-family:var(--serif); font-size:1.12rem; margin:2.4em 0 .6em;
+    padding-bottom:.35em; border-bottom:1px solid var(--line);
+  }
+  p{margin:0 0 1em;}
+  ul{margin:0 0 1.2em; padding-left:1.3em;}
+  li{margin:.25em 0;}
+  footer{border-top:1px solid var(--line); padding:32px 0; color:var(--faint); font-size:.85rem;}
+  footer .wrap{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;}
+  @media (max-width:520px){
+    main{padding:40px 0 60px;}
+    h1{font-size:1.55rem;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">あしあと帖<span class="soled">SOLED</span></a>
+    <nav>
+      <a href="/">ホーム</a>
+      <a href="/privacy-en.html" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日：2026年9月25日</p>
+<p>「あしあと帖」（英語名 Ashiato-cho。以下「本アプリ」）を使ってくださって、ありがとうございます。</p>
+<p>このページには、本アプリがどんな情報を扱い、どこへ送り、そして何を送らないのかを書いています。むずかしい言い方はできるだけ避けました。</p>
+<h2>運営者について</h2>
+<p>本アプリは、会社ではなく個人の開発者が作って運営しています。</p>
+<ul>
+  <li>運営者：デプロイ（個人事業。法人ではありません）</li>
+  <li>連絡先：<a href="mailto:kimura0223sota@gmail.com">kimura0223sota@gmail.com</a></li>
+  <li>ウェブサイト：<a href="https://kimu0223.github.io/" rel="noopener">https://kimu0223.github.io/</a></li>
+</ul>
+<p>EU一般データ保護規則（GDPR）でいう「管理者（controller）」は上記の運営者です。データ保護責任者（DPO）は置いていないため、ご連絡はすべて上のメールアドレスへお願いします。</p>
+<h2>端末の中だけに保存される情報</h2>
+<p>次の情報は、お客様の端末の中だけに保存されます。外部のサーバーへは送られず、運営者が見ることもできません。</p>
+<ul>
+  <li>シューズの情報（名前、ブランド、モデル名、カテゴリ、使いはじめた日、引退した日、満足度の星、並び順）</li>
+  <li>思い出の情報（本文、タグ「試合・練習・マイルストーン・遠征・日常」、日付）</li>
+  <li>写真（端末内の本アプリ専用のフォルダに保存されます）</li>
+  <li>アプリの設定（デザイン、配色、並び替え）</li>
+</ul>
+<p>本アプリにアカウント登録やログインはありません。運営者は自前のサーバーを持っていないので、これらの中身を受け取る仕組みそのものがありません。</p>
+<p>アプリを端末から消すと、これらの情報は写真も含めてすべて無くなります。1足だけ消したいときは、アプリの中でそのシューズを「卒業」させてください。写真と思い出も一緒になくなります。</p>
+<p>iCloud 同期は現時点では提供していません。提供するときは、事前に本ポリシーを更新します。</p>
+<h2>写真とEXIF（位置情報）</h2>
+<p>スマートフォンで撮った写真には、撮影場所のGPS座標や撮影日時などの情報（EXIF）が埋め込まれていることがあります。</p>
+<p>本アプリは、写真を取り込むときにEXIFを自動的に取り除いてから保存します。GPS座標が写真に残ることはありません。</p>
+<p>写真そのものも端末の中だけに保存され、外部へ送信されることはありません。</p>
+<h2>広告について</h2>
+<p>無料版では、Google AdMob（提供元：Google LLC、米国）の広告を表示します。プレミアム版（買い切り）をご購入いただくと、広告は表示されなくなります。</p>
+<p>広告を配信するために、Google はお客様の端末の情報や広告識別子（IDFA）などを受け取ることがあります。これは運営者ではなく Google が行う処理です。</p>
+<ul>
+  <li>iOS の「トラッキングを許可しますか」という画面（App Tracking Transparency）で許可をいただいたときだけ、広告識別子（IDFA）を使ったパーソナライズ広告を表示します。</li>
+  <li>許可しなかった場合は、パーソナライズされない広告に切り替わります。広告そのものが消えるわけではありません。</li>
+  <li>ヨーロッパ経済領域（EEA）や英国など、同意の取得が必要な地域では、Google の同意フォーム（User Messaging Platform）が表示されます。対象の地域かどうかは Google が判定します。</li>
+  <li>その地域で同意をいただけなかった場合、本アプリは広告のリクエスト自体を行いません。</li>
+  <li>同意フォームが表示される地域では、アプリの「設定」に「プライバシー設定」という行が出ます。そこからいつでも同意の内容を変えられます。</li>
+</ul>
+<p>歴代（引退した）シューズだけを表示している画面には、広告を表示しません。</p>
+<h2>利用状況の分析について</h2>
+<p>どの機能が使われているかを知ってアプリを良くするために、PostHog（提供元：PostHog Inc.、米国。送信先は us.i.posthog.com）へ利用状況のデータを送っています。</p>
+<p>ヨーロッパ経済領域（EEA）や英国など、同意の取得が必要な地域では、同意をいただけるまで分析の仕組みそのものを起動せず、データを一切送りません。同意は「設定」の「プライバシー設定」からいつでも撤回でき、撤回すると以後の送信を停止します。</p>
+<p>送っているのは、次のような「操作したという事実」だけです。</p>
+<ul>
+  <li>シューズを登録した、歴代へ移した、現役に戻した</li>
+  <li>思い出を追加した</li>
+  <li>ブランドを一覧から選んだ、自分で入力した、サンプルの色を選んだ</li>
+  <li>タブ、年表、思い出の一覧を開いた</li>
+  <li>デザインや配色を変えた、無料版のため変えられなかった</li>
+  <li>プレミアムの案内を開いた、購入した、動画広告を最後まで見た</li>
+</ul>
+<p>これらと一緒に送られるのは、タブの名前、デザインや配色の識別子、件数、使用日数、画面の名前、入力方法の種別といった、個人を特定しない値だけです。</p>
+<p>シューズの名前、思い出の本文、写真は送っていません。</p>
+<p>このほか、PostHog の SDK が既定で次の情報を付けて送ります。</p>
+<ul>
+  <li>端末ごとにランダムに作られる匿名のID（お名前やメールアドレスとは結びついていません）</li>
+  <li>アプリのインストール、アップデート、起動、バックグラウンドへの移行の記録</li>
+  <li>表示した画面の名前</li>
+  <li>端末の機種、OSの名前とバージョン、アプリのバージョン、言語、タイムゾーン、画面サイズ、ネットワークの種類</li>
+  <li>通信のしくみ上、PostHog のサーバーには IP アドレスが届きます</li>
+</ul>
+<p>画面の録画（セッションリプレイ）は使っていません。</p>
+<h2>購入について</h2>
+<p>プレミアム版の購入と復元は、Apple（App Store と StoreKit）が処理します。</p>
+<p>クレジットカード番号などの決済情報が本アプリに渡ることはありません。本アプリが受け取るのは「購入済みかどうか」という状態だけです。</p>
+<h2>利用目的と法的根拠</h2>
+<p>何のために情報を扱い、GDPR 第6条のどの根拠によるのかは次のとおりです。</p>
+<ul>
+  <li>アプリの機能を提供するため（シューズや思い出の記録・表示、写真の保存）：お客様との契約の履行（GDPR 第6条1項(b)）。これらのデータは端末の中だけで扱われます。</li>
+  <li>プレミアム版の購入と復元を反映するため：お客様との契約の履行（GDPR 第6条1項(b)）。</li>
+  <li>パーソナライズ広告を表示するため：お客様の同意（GDPR 第6条1項(a)）。iOS のトラッキング許可と、対象地域では Google の同意フォームで取得します。</li>
+  <li>パーソナライズしない広告を表示して、無料版を無料のまま提供し続けるため：運営者の正当な利益（GDPR 第6条1項(f)）。ただし同意の取得が必要な地域では、同意がない限り広告のリクエストを行いません。</li>
+  <li>利用状況を分析してアプリを改善するため：同意の取得が必要な地域（EEA・英国など）では、お客様の同意（GDPR 第6条1項(a)）。同意をいただけない限り分析は行いません。それ以外の地域では、不具合を見つけて機能を良くするという運営者の正当な利益（GDPR 第6条1項(f)）に基づきます。いずれの場合も、個人を特定しない匿名のデータだけを扱っています。この処理にはいつでも異議を申し立てられます。</li>
+</ul>
+<p>本アプリを使うために、お名前・メールアドレス・電話番号などを登録する必要はありません。トラッキングを許可しなくても機能が制限されることはなく、広告の内容が最適化されなくなるだけです。</p>
+<p>本アプリは、お客様に法的な効果や重大な影響を及ぼすような自動的な意思決定を行いません。</p>
+<h2>情報を渡す相手</h2>
+<p>運営者が情報を売ることはありません。情報が渡るのは、次のサービスを動かすために必要な範囲だけです。</p>
+<ul>
+  <li>Google LLC（米国）— 広告の配信。プライバシーポリシー：<a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a></li>
+  <li>Google がサービス利用時の情報をどう扱うかの説明：<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">https://policies.google.com/technologies/partner-sites</a></li>
+  <li>PostHog Inc.（米国）— 利用状況の分析。プライバシーポリシー：<a href="https://posthog.com/privacy" rel="noopener">https://posthog.com/privacy</a></li>
+  <li>Apple Inc.（米国）— アプリの配信と購入の処理。プライバシーポリシー：<a href="https://www.apple.com/jp/legal/privacy/" rel="noopener">https://www.apple.com/jp/legal/privacy/</a></li>
+</ul>
+<p>法令に基づいて開示が求められた場合を除き、上記以外に情報を渡すことはありません。</p>
+<h2>米国への移転について</h2>
+<p>Google と PostHog はいずれも米国の会社で、データはお客様の国の外にあるサーバーへ送られます。</p>
+<p>両社は、EU標準契約条項（SCC）などの仕組みを用いて国外への移転を行うとしています。実際にどの仕組みが適用されるかは各社が定めているため、詳しくは上のリンク先の各社のプライバシーポリシーをご確認ください。</p>
+<h2>保存する期間</h2>
+<ul>
+  <li>端末の中の情報（シューズ、思い出、写真、設定）：アプリを端末から消すまで保存されます。消すと同時に無くなります。</li>
+  <li>Google と PostHog へ送られた情報：各社の定める期間だけ保存されます。詳しくは各社のプライバシーポリシーをご確認ください。</li>
+</ul>
+<h2>お客様の権利</h2>
+<p>ご自身の個人データについて、お客様には次の権利があります。EU・EEA・英国にお住まいの方は GDPR 第15条から第22条、日本にお住まいの方は個人情報の保護に関する法律に基づきます。</p>
+<ul>
+  <li>自分のデータにアクセスする権利</li>
+  <li>間違いを訂正してもらう権利</li>
+  <li>消去してもらう権利</li>
+  <li>利用を制限してもらう権利</li>
+  <li>利用に異議を申し立てる権利</li>
+  <li>持ち運べる形式でデータを受け取る権利（データポータビリティ）</li>
+  <li>同意をいつでも撤回する権利</li>
+</ul>
+<p>端末の中の情報については、アプリの画面からご自身で確認・編集・消去ができます。運営者はこれらのデータを持っていないため、代わりに取り出したり消したりすることはできません。</p>
+<p>Google と PostHog へ送られたデータについてのご請求は、上のメールアドレスへご連絡ください。運営者からできる範囲で取り次ぎます。ただしこれらのデータは匿名のIDとしか結びついていないため、お客様ご本人のデータを特定できない場合があります（GDPR 第11条）。</p>
+<h2>同意の撤回とトラッキングを止める方法</h2>
+<ul>
+  <li>iOS の「設定」アプリの「プライバシーとセキュリティ」から「トラッキング」を開くと、本アプリの許可をいつでもオフにできます。オフにすると、以後はパーソナライズ広告が表示されなくなります。</li>
+  <li>同意フォームが表示される地域では、本アプリの「設定」にある「プライバシー設定」からいつでも同意の内容を変えられます。</li>
+  <li>プレミアム版（買い切り）をご購入いただくと、広告は表示されなくなります。</li>
+  <li>アプリを端末から消すと、端末内のデータは無くなり、以後のデータ送信も行われません。</li>
+</ul>
+<p>同意を撤回しても、撤回するまでに行われた処理がさかのぼって違法になるわけではありません。</p>
+<h2>13歳未満のお子様について</h2>
+<p>本アプリは、高校生・大学生を中心としたアスリートの方に向けて作っています。</p>
+<p>13歳未満のお子様から意図的に個人情報を収集することはありません。お子様が本アプリを使っていることにお気づきになった保護者の方は、上のメールアドレスへご連絡ください。</p>
+<h2>本ポリシーの変更</h2>
+<p>本ポリシーを変更したときは、このページと、アプリ内の「設定」から開く「プライバシーポリシー」の本文をどちらも更新し、いちばん上の最終更新日を書き換えます。</p>
+<p>お客様に大きく関わる変更を行うときは、アプリの更新情報でもお知らせします。</p>
+<h2>お問い合わせと苦情の申立て</h2>
+<p>本ポリシーや個人情報の扱いについてのご質問・ご請求は、<a href="mailto:kimura0223sota@gmail.com">kimura0223sota@gmail.com</a> までお願いします。</p>
+<p>運営者の対応にご納得いただけない場合は、監督機関へ苦情を申し立てることができます。</p>
+<ul>
+  <li>日本：個人情報保護委員会 <a href="https://www.ppc.go.jp/" rel="noopener">https://www.ppc.go.jp/</a></li>
+  <li>EU・EEA：お住まいの国のデータ保護機関（一覧 <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" rel="noopener">https://edpb.europa.eu/about-edpb/about-edpb/members_en</a>）</li>
+  <li>英国：Information Commissioner&#x27;s Office <a href="https://ico.org.uk/" rel="noopener">https://ico.org.uk/</a></li>
+</ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 デプロイ / あしあと帖</span>
+    <span><a href="mailto:kimura0223sota@gmail.com">kimura0223sota@gmail.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
